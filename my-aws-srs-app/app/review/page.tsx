@@ -49,7 +49,7 @@ export default function ReviewPage() {
         console.error('Error fetching cards:', error);
         setErrorMessage('Unable to load your review cards.');
       } else {
-        setCards(data || []);
+        setCards((data || []) as Flashcard[]);
       }
       setIsLoading(false);
     }

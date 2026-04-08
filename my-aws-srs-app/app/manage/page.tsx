@@ -80,7 +80,7 @@ export default function ManageCardsPage() {
         console.error('Error fetching cards:', error);
         setErrorMessage('Unable to load your cards.');
       } else {
-        setCards(data ?? []);
+        setCards((data ?? []) as Flashcard[]);
       }
 
       setIsLoading(false);

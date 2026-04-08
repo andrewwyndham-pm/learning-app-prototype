@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
+import { GoogleGenerativeAI, SchemaType, type Schema } from '@google/generative-ai';
 
 export interface GeneratedFlashcard {
   back: string;
@@ -19,7 +19,7 @@ if (!geminiApiKey) {
 
 const genAI = new GoogleGenerativeAI(geminiApiKey);
 
-const flashcardSchema = {
+const flashcardSchema: Schema = {
   type: SchemaType.ARRAY,
   items: {
     type: SchemaType.OBJECT,
