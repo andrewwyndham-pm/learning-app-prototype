@@ -161,6 +161,16 @@ export default function ReviewPage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50">
+      <Link
+        href="/"
+        className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
+        aria-label="Back to home"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+          <path fillRule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clipRule="evenodd" />
+        </svg>
+        Home
+      </Link>
       <div className="w-full max-w-2xl">
         <p className="text-center text-sm text-gray-500 mb-4">{currentCardIndex + 1} of {cards.length}</p>
         {errorMessage ? <p className="mb-4 text-center text-sm text-red-600">{errorMessage}</p> : null}
